@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <link rel="apple-touch-icon" sizes="57x57" href="public/images/apple-icon-57x57.png">
+      <link rel="apple-touch-icon" sizes="60x60" href="public/images/apple-icon-60x60.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="public/images/apple-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="public/images/apple-icon-76x76.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="public/images/apple-icon-114x114.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="public/images/apple-icon-120x120.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="public/images/apple-icon-144x144.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="public/images/apple-icon-152x152.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="public/images/apple-icon-180x180.png">
+      <link rel="icon" type="image/png" sizes="192x192"  href="public/images//android-icon-192x192.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="public/images/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="96x96" href="public/images/favicon-96x96.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="public/images/favicon-16x16.png">
+      <link rel="manifest" href="public/images/manifest.json">
+      <meta name="msapplication-TileColor" content="#ffffff">
+      <meta name="msapplication-TileImage" content="public/images/ms-icon-144x144.png">
+      <meta name="theme-color" content="#ffffff">
+
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <!-- Optional theme -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+     <link rel="stylesheet" href="public/css/style.css">
+
+     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+   </head>
+  <body>
+        <h1>Machine Learning Algorithms</h1>
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true" >
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                  <h4 class="panel-title">
+                    <a role="button"  data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Simple Linear Regression
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                  <div class="panel-body">
+                      <h1>Definition</h1>
+                      <div class="section">
+                          <p>
+                              Linear regression is a linear model that assumes a linear relationship between
+                              the input variables (x) and the <b>single</b> output variable (y). More specifically, that y can be
+                              calculated from a linear combination of the input variables (x). When there is a single input
+                              variable (x), the method is referred to as simple linear regression.
+                          </p>
+                          <h2>y = B0 + B1 * x</h2>
+                          <br/>
+                          <p>
+                              This is a line where <strong>y</strong> is the output variable we want to predict, x is the input variable
+                              we know and B0 and B1 are coefficients that we need to estimate that move the line around.<br />
+                              In machine learning <strong class="blue">B0</strong> is called <strong class="blue">the bias</strong>, because it is added to offset all predictions that
+                              we make. <br />
+                              The <strong class="green">B1</strong> term is called <strong class="green">the slope</strong> because it defines the slope of the line or how x
+                              translates into a y value before we add our bias.
+                              <br/>
+                              <br/>
+                              The goal is to find the best estimates for the coefficients to minimize the errors in predicting y from x
+                              <br />
+                              <p>
+                                  The error score for our predictions is called the <strong>Root Mean Squared Error</strong> or RMSE.
+                              </p>
+                          </p>
+                      </div>
+                      <h1>Formula</h1>
+                      <div  class="section">
+                          <p>
+                              <h2>Formula to calculate B1:</h2>
+                          </p>
+                          <p>
+                              <img src="public/images/simple_linear_regression_formula.png" />
+                          </p>
+                          <p>
+                              <h2>Formula to calculate B0:</h2>
+                          </p>
+                          <p>
+                              <img src="public/images/simple_linear_regression_formula_b0.png" />
+                          </p>
+                          <br />
+                          <p>
+                              <h2>Formula to calculate RMSE:</h2>
+                          </p>
+                          <p>
+                              <img src="public/images/rmse.png" />
+                          </p>
+                          <p>
+                              where p<sub>i</sub> is the prediction of the line i calculate using B0 and B1
+                          </p>
+                      </div>
+
+                    <p>
+                        <br />
+
+                        <br />
+                        <a class="btn btn-primary" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                         Show Example
+                        </a>
+                        <div class="collapse" id="collapseExample">
+                          <div class="well">
+                              <p>
+                                  Given the example bellow:
+                              </p>
+                              <p>
+                                  mean(x) = 3<br />
+                                  mean(y) = 2.8
+                              </p>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>X</th>
+                                        <th>Y</th>
+                                        <th>x - mean(x)</th>
+                                        <th>y - mean(y)</th>
+                                        <th>(x - mean(x)) * (y - mean(y))</th>
+                                        <th>(x - mean(x))<sup>2</sup></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>-2</td>
+                                        <td>-1.8</td>
+                                        <td>3.6</td>
+                                        <td>4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>-1</td>
+                                        <td>0.2</td>
+                                        <td>-0.2</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>3</td>
+                                        <td>1</td>
+                                        <td>0.2</td>
+                                        <td>0.2</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>2</td>
+                                        <td>0</td>
+                                        <td>-0.8</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>5</td>
+                                        <td>2</td>
+                                        <td>2.2</td>
+                                        <td>4.4</td>
+                                        <td>4</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <p>
+                                B1 =
+                                <span class="blue">&Sigma; (x<sub>i</sub> - mean(x<sub>i</sub>))*(y<sub>i</sub>-mean(y<sub>i</sub>))</span>
+                                /
+                                 <span class="green">&Sigma; (x<sub>i</sub> - mean(x<sub>i</sub>))<sup>2</sup></span>
+                            </p>
+                            <p>
+                                B1 =
+                                <span class="blue">(1-3)*(1-2.8) + (2-3)*(3-2.8) + (4-3)*(3-2.8) + (3-3)*(2-2.8) + (5-3)*(5-2.8)</span>
+                                /
+                                <span class="green">(1-3)<sup>2</sup> + (2-3)<sup>2</sup> + (4-3)<sup>2</sup> + (3-3)<sup>2</sup> + (5-3)<sup>2</sup></span>
+                            </p>
+                            <p>
+                                B1 =
+                                <span class="blue">8</span>
+                                /
+                                <span class="green">10</span>
+                            </p>
+                            <p>
+                                <strong>B1 = 0.8</strong>
+                            </p>
+                            <p>
+                                And so:
+                            </p>
+                            <p>
+                                B0 = mean(y) - B1 * mean(x)
+                            </p>
+                            <p>
+                                B0 = 2.8 - (0.8 * 3)
+                            </p>
+                            <p>
+                                <strong>B0 = 0.4</strong>
+                            </p>
+                            <p>
+                                Prediction is now:
+                            </p>
+                            <p>
+                                Predition(x) = B0 + B1 * x
+                                Predition(x) = 0.4 + 0.8 * x
+                            </p>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>X</th>
+                                        <th>P(x) = 0.4 + 0.8*x</th>
+                                        <th>Prediction - y </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>1.2</td>
+                                        <td>0.2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>2</td>
+                                        <td>-1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>3.6</td>
+                                        <td>0.6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>2.8</td>
+                                        <td>0.8</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>4.4</td>
+                                        <td>-0.6</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p>
+                                RMSE = <span class="green">SQRT(</span> <span style="color: blue">&Sigma;(Prediction<sub>i</sub> - y<sub>i</sub>)<sup>2</sup> </span>/ numberOfElements<span class="green">)</span>
+                            </p>
+                            <p>
+                                RMSE = <span class="green">SQRT(</span> <span style="color: blue"> (1.2-1)<sup>2</sup> + (2-3)<sup>2</sup> + (3.6 - 3)<sup>2</sup>  + (2.8-2)<sup>2</sup> + (4.4-5)<sup>2</sup> </span>/ 5<span class="green">)</span>
+                            </p>
+                            <p>
+                                <strong>RMSE = 0.692820323</strong>
+                            </p>
+                          </div>
+                        </div>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                  <h4 class="panel-title">
+                    <a role="button"  data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                        Stochastic Gradient Descent (incomplete)
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                  <div class="panel-body">
+                      <h1>Definition</h1>
+                      <div class="section">
+                          <p>
+                              The way this optimization algorithm works is that each training instance is shown to the
+                             model one at a time. The model makes a prediction for a training instance, the error is calculated
+                             and the model is updated in order to reduce the error for the next prediction. This procedure
+                             can be used to find the set of coefficients in a model that result in the smallest error for the
+                             model on the training data. Each iteration, the coefficients called weights (w) in machine
+                             learning language are updated using the equation
+                          </p>
+                      </div>
+                      <h1>Formula</h1>
+                      <div  class="section">
+
+                      </div>
+
+                        <p>
+                            <a class="btn btn-primary" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                             Show Example
+                            </a>
+                            <div class="collapse" id="collapseExample">
+                              <div class="well">
+
+
+                              </div>
+                            </div>
+                        </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+        <!--ul>
+          <li>
+            <input type="checkbox" checked>
+            <i></i>
+            <h2>Simple Linear Regression</h2>
+            <p>
+                <div>
+                    Linear regression is a linear model that assumes a linear relationship between
+                    the input variables (x) and the <b>single</b> output variable (y). More specifically, that y can be
+                    calculated from a linear combination of the input variables (x). When there is a single input
+                    variable (x), the method is referred to as simple linear regression.
+                </div>
+                <div>
+                    Formula:
+                    <p>
+                        <span>y = B0 + B1 * x</span>
+                    </p>
+                    <p>
+                        <img src="public/images/simple_linear_regression_formula.png" />
+                    </p>
+                </div>
+            </p>
+          </li>
+          <li>
+            <input type="checkbox" checked>
+            <i></i>
+            <h2>How it Works</h2>
+            <p>Using the sibling and checked selectors, we can determine the styling of sibling elements based on the checked state of the checkbox input element. One use, as demonstrated here, is an entirely CSS and HTML accordion element. Media queries are used to make the element responsive to different screen sizes.</p>
+          </li>
+          <li>
+            <input type="checkbox" checked>
+            <i></i>
+            <h2>Points of Interest</h2>
+            <p>By making the open state default for when :checked isn't detected, we can make this system accessable for browsers that don't recognize :checked. The fallback is simply an open accordion. The accordion can be manipulated with Javascript (if needed) by changing the "checked" property of the input element.</p>
+          </li>
+      </ul -->
+  </body>
+</html>
